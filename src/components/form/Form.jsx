@@ -1,5 +1,8 @@
 import Button from "../button/Button";
 import TextField from "../textField/TextField";
+import "./Form.css";
+import "../textField/TextField.css";
+import Select from "../select/Select";
 
 const Form = () => {
   const handleClick = (e) => {
@@ -7,7 +10,7 @@ const Form = () => {
     console.log("Hello");
   };
   return (
-    <form>
+    <form className="form">
       <TextField type="text" id="firstName" label="First Name" />
       <TextField type="text" id="lastName" label="Last Name" />
 
@@ -16,27 +19,19 @@ const Form = () => {
       <TextField type="text" id="startDate" label="Start Date" />
       {/* ////// */}
 
-      <div>
-        <div>
-          <TextField type="text" id="street" label="Street" />
-          <TextField type="text" id="city" label="City" />
-          <div>
-            <label htmlFor="state" />
-            <select id="state">
-              <option>Alabama</option>
-              <option>Alaska</option>
-            </select>
-          </div>
-          <TextField type="number" id="zipCode" label="zipCode" />
-        </div>
-        <div>
-          <label htmlFor="department" />
-          <select id="department">
-            <option>Alabama</option>
-            <option>Alaska</option>
-          </select>
-        </div>
-      </div>
+      <TextField type="text" id="street" label="Street" />
+      <TextField type="text" id="city" label="City" />
+
+      <Select id="state" label="State" options={["Alabama", "Alaska"]} />
+
+      <TextField type="number" id="zipCode" label="zipCode" />
+
+      <Select
+        id="department"
+        label="Department"
+        options={["Alabama", "Alaska"]}
+      />
+
       <Button handleClick={handleClick}>Save</Button>
     </form>
   );
