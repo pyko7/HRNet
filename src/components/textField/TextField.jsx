@@ -8,7 +8,7 @@ import "./TextField.css";
  */
 const TextField = ({ id, type, label }) => {
   return (
-    <div>
+    <div className="textfield-label-container">
       {label && (
         <label htmlFor={id} className="label">
           {label}
