@@ -1,11 +1,7 @@
-import CreateEmployee from "./pages/CreateEmployee";
+import CreateEmployee from "./pages/CreateEmployee/CreateEmployee";
 
 function App() {
-  return (
-    <>
-      <CreateEmployee />
-    </>
-  );
+  return <CreateEmployee />;
 }
 
 export default App;
