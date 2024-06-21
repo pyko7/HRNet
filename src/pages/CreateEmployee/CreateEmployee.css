@@ -24,9 +24,3 @@
 .create-employee-link-button:hover {
   text-decoration: underline;
 }
-
-.layout {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #60a5fa;
-}

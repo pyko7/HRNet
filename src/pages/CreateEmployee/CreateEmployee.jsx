@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import Form from "../../components/form/Form";
+import Layout from "../../components/layout/Layout";
 import "./CreateEmployee.css";
 
 const CreateEmployee = () => {
   return (
-    <div className="layout">
+    <Layout title="Create Employee">
       <div className="create-employee-container">
-        <h1 style={{ textAlign: "center" }}>Create Employee</h1>
         <Link to="/employees" className="create-employee-link-button">
           View Current Employees
         </Link>
@@ -14,7 +14,7 @@ const CreateEmployee = () => {
           <Form />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
