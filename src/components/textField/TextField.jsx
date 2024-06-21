@@ -9,7 +9,11 @@ import "./TextField.css";
 const TextField = ({ id, type, label }) => {
   return (
     <div>
-      {label && <label htmlFor={id}>{label}</label>}
+      {label && (
+        <label htmlFor={id} className="label">
+          {label}
+        </label>
+      )}
       <input type={type} id={id} className={"textfield"} />
     </div>
   );

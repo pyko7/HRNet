@@ -1,5 +1,10 @@
+import "./Button.css";
 const Button = ({ handleClick, children }) => {
-  return <button onClick={handleClick}>{children}</button>;
+  return (
+    <button onClick={handleClick} className="button">
+      {children}
+    </button>
+  );
 };
 
 export default Button;

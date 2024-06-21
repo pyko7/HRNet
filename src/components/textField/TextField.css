@@ -4,3 +4,7 @@
   border: 1px solid #ccc;
   border-radius: 7px;
 }
+
+.label {
+  font-size: 14px;
+}
