@@ -39,6 +39,8 @@
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
   background-color: #ddd;
+  outline: none;
 }
