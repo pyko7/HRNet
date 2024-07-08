@@ -1,6 +1,6 @@
 import Button from "../button/Button";
 import TextField from "../textField/TextField";
-import Select from "../select/Select";
+import DropdownMenu from "../dropdownMenu/DropdownMenu";
 import { departments, states } from "../../utils/utils";
 import "./Form.css";
 import "../textField/TextField.css";
@@ -24,11 +24,21 @@ const Form = () => {
       <TextField type="text" id="street" label="Street" />
       <TextField type="text" id="city" label="City" />
 
-      <Select id="state" label="State" options={statesName} />
+      <div className="textfield-label-container">
+        <label className="label" htmlFor="State">
+          State
+        </label>
+        <DropdownMenu options={statesName} />
+      </div>
 
       <TextField type="number" id="zip-code" label="Zip code" />
 
-      <Select id="department" label="Department" options={departments} />
+      <div className="textfield-label-container">
+        <label className="label" htmlFor="Department">
+          Department
+        </label>
+        <DropdownMenu options={departments} />
+      </div>
 
       <Button handleClick={handleClick}>Save</Button>
     </form>
