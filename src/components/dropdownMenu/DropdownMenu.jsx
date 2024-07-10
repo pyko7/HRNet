@@ -85,7 +85,7 @@ const DropdownMenu = ({ options }) => {
             <li
               key={item.id ?? index}
               ref={(el) => (itemRefs.current[index] = el)}
-              tabIndex={-1}
+              tabIndex={1}
               onClick={() => handleItemClick(item)}
               onKeyDown={handleKeyDown}
             >
