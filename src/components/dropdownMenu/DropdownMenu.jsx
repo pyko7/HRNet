@@ -42,7 +42,7 @@ const DropdownMenu = ({ options }) => {
         );
       } else if (e.key === "Enter" && focusedIndex >= 0) {
         handleItemClick(options[focusedIndex]);
-      } else if (e.key === "Escape") {
+      } else if (e.key === "Escape" || e.key === "Tab") {
         e.preventDefault();
         setIsOpen(false);
       }
@@ -85,7 +85,7 @@ const DropdownMenu = ({ options }) => {
             <li
               key={item.id ?? index}
               ref={(el) => (itemRefs.current[index] = el)}
-              tabIndex={1}
+              tabIndex={-1}
               onClick={() => handleItemClick(item)}
               onKeyDown={handleKeyDown}
             >
