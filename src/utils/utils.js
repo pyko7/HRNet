@@ -244,3 +244,15 @@ export const departments = [
   "Human Resources",
   "Legal",
 ];
+
+export const tableHeader = [
+  { label: "First Name", key: "firstName" },
+  { label: "Last Name", key: "lastName" },
+  { label: "Start Date", key: "startDate" },
+  { label: "Department", key: "department" },
+  { label: "Date of Birth", key: "dateOfBirth" },
+  { label: "Street", key: "street" },
+  { label: "City", key: "city" },
+  { label: "State", key: "state" },
+  { label: "Zip Code", key: "zipCode" },
+];

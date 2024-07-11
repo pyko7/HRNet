@@ -1,0 +1,50 @@
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead tr {
+  background-color: #e5e7eb;
+}
+
+.table th,
+.table td {
+  width: 100%;
+  min-width: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table td {
+  background-color: #f3f3f3;
+}
+
+tr {
+  display: flex;
+}
+
+.table tbody tr td {
+  width: 100%;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid transparent;
+}
+
+.sort-button {
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-left: 0.5rem;
+}
+
+.sort-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
