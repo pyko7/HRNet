@@ -6,10 +6,12 @@ import "./Modal.css";
  * @description Modal component
  * @param {string} title Title of the modal
  * @param {string} [subtitle] Subtitle of the modal
+ * @param {string} [buttonName] Name of the button
  * @param {Function} onClose Callback function to close the modal
+ * @param {Function} onClick Callback function on save button click
  * @returns
  */
-const Modal = ({ title, subtitle, onClose }) => {
+const Modal = ({ title, subtitle, buttonName, onClose, onClick }) => {
   return (
     <div className="modal-container">
       <div className="modal-background" onClick={onClose}></div>
@@ -20,6 +22,7 @@ const Modal = ({ title, subtitle, onClose }) => {
         </div>
         <span className="modal-text modal-subtitle">{subtitle}</span>
       </div>
+      {buttonName && <button onClick={onClick}>{buttonName}</button>}
     </div>
   );
 };
