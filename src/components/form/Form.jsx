@@ -8,6 +8,10 @@ import { departments, states } from "../../utils/utils";
 import "./Form.css";
 import "../textField/TextField.css";
 
+/**
+ * @description Create employee form component
+ * @returns {React.FC}
+ */
 const Form = () => {
   const [visible, setVisible] = useState(false);
   const statesName = states.map((state) => state.name);
@@ -49,7 +53,9 @@ const Form = () => {
           <DropdownMenu options={departments} />
         </div>
 
-        <Button handleClick={handleClick}>Save</Button>
+        <Button variant="contained" handleClick={handleClick}>
+          Save
+        </Button>
       </form>
       {visible &&
         createPortal(

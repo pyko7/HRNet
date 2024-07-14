@@ -1,13 +1,21 @@
 .button {
   width: 100%;
+  cursor: pointer;
+}
+
+.button-contained {
   padding: 10px 5px;
   color: #fff;
   background-color: #2563eb;
   border: none;
   border-radius: 7px;
-  cursor: pointer;
 }
 
-.button:hover {
+.button-contained:hover {
   opacity: 0.8;
+}
+
+.button-standard {
+  background-color: transparent;
+  border: none;
 }

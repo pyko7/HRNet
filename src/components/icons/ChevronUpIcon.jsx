@@ -1,3 +1,8 @@
+/**
+ * @description Chevron up icon component
+ * @param {string} [className] component class name
+ * @returns
+ */
 const ChevronUpIcon = ({ className }) => {
   return (
     <svg

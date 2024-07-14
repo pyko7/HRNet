@@ -1,9 +1,9 @@
-import CloseButton from "../closeButton/CloseButton";
+import Button from "../button/Button";
 import "./Modal.css";
 // UPDATE CLOSE BUTTON ICON TO SVG COMPONENT
 
 /**
- *
+ * @description Modal component
  * @param {string} title Title of the modal
  * @param {string} [subtitle] Subtitle of the modal
  * @param {Function} onClose Callback function to close the modal
@@ -16,7 +16,7 @@ const Modal = ({ title, subtitle, onClose }) => {
       <div className="modal">
         <div className="modal-header">
           <span className="modal-text modal-title">{title}</span>
-          <CloseButton handleClick={onClose} />
+          <Button variant="standard">X</Button>
         </div>
         <span className="modal-text modal-subtitle">{subtitle}</span>
       </div>

@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { sortEmployees } from "../../features/table/tableSlice";
 import ChevronUpIcon from "../icons/ChevronUpIcon";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
-import SortButton from "../sortButton/SortButton";
+import Button from "../button/Button";
 import "./Table.css";
 
 const TableSortButtons = ({ columnKey }) => {
@@ -18,12 +18,12 @@ const TableSortButtons = ({ columnKey }) => {
 
   return (
     <span className="sort-button-container">
-      <SortButton handleClick={handleSortAsc}>
+      <Button variant="standard" handleClick={handleSortAsc}>
         <ChevronUpIcon className="sort-button" />
-      </SortButton>
-      <SortButton handleClick={handleSortDesc}>
+      </Button>
+      <Button variant="standard" handleClick={handleSortDesc}>
         <ChevronDownIcon className="sort-button" />
-      </SortButton>
+      </Button>
     </span>
   );
 };
