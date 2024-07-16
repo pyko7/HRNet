@@ -1,0 +1,29 @@
+.searchbar-container {
+  width: 100%;
+  max-width: 20rem;
+  padding: 5px 7px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: #ccc;
+}
+.searchbar {
+  width: 100%;
+  padding: 0 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.searchbar-button {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.searchbar-icon {
+  width: 1rem;
+  height: 1rem;
+}

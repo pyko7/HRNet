@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
 import Table from "../../components/table/Table";
+import Searchbar from "../../components/searchbar/Searchbar";
 import "./Employees.css";
 
 const body = [
@@ -64,11 +65,16 @@ const body = [
 const Employees = () => {
   return (
     <Layout title="Current Employees">
-      <div id="employee-div" className="container">
-        <Table body={body} />
+      <div className="employee-page-wrapper">
         <Link to="/" className="link-button">
           Home
         </Link>
+        <div className="searchbar-tools-container">
+          <Searchbar />
+        </div>
+        <div id="employee-div" className="container table-container">
+          <Table body={body} />
+        </div>
       </div>
     </Layout>
   );
