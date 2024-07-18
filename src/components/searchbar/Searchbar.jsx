@@ -3,7 +3,7 @@ import CloseIcon from "../icons/CloseIcon";
 import SearchIcon from "../icons/SearchIcon";
 import "./Searchbar.css";
 import { useDispatch } from "react-redux";
-import { searchEmployee } from "../../features/table/tableSlice";
+import { searchEmployee } from "../../features/employees/employeesSlice";
 
 const Searchbar = ({ id, placeholder }) => {
   const [inputValue, setInputValue] = useState("");

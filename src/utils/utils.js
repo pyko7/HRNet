@@ -258,3 +258,15 @@ export const tableHeader = [
 ];
 
 export const lengthNumber = ["5", "10", "25", "50", "100"];
+
+export const emptyEmployeeData = {
+  firstName: "",
+  lastName: "",
+  birthDate: "",
+  startDate: "",
+  street: "",
+  city: "",
+  state: "",
+  zipCode: "",
+  department: "",
+};

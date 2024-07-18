@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import "./Select.css";
-import { filterByLength } from "../../features/table/tableSlice";
+import { filterByLength } from "../../features/employees/employeesSlice";
 
 const Select = ({ options }) => {
   const dispatch = useDispatch();

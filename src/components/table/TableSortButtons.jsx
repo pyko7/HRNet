@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { sortEmployees } from "../../features/table/tableSlice";
+import { sortEmployees } from "../../features/employees/employeesSlice";
 import ChevronUpIcon from "../icons/ChevronUpIcon";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import Button from "../button/Button";

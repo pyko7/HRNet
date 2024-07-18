@@ -5,11 +5,12 @@ import ChevronDownIcon from "../icons/ChevronDownIcon";
 /**
  * @description Dropdown component
  * @param {string[]} options List of select options
+ * @param {string} value The selected value
+ * @param {function} onChange Callback function to handle value change
  * @returns
  */
-const DropdownMenu = ({ options }) => {
+const DropdownMenu = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
 
   const itemRefs = useRef([]);
@@ -20,7 +21,9 @@ const DropdownMenu = ({ options }) => {
   };
 
   const handleItemClick = (item) => {
-    setSelectedItem(item);
+    if (onChange) {
+      onChange(item);
+    }
     setIsOpen(false);
     setFocusedIndex(-1);
   };
@@ -76,7 +79,7 @@ const DropdownMenu = ({ options }) => {
         onClick={toggleDropdown}
         onKeyDown={handleKeyDown}
       >
-        <span>{selectedItem || "Select an item"}</span>
+        <span>{value || "Select an item"}</span>
         <ChevronDownIcon aria-hidden="true" className="dropdown-icon" />
       </button>
       {isOpen && (
