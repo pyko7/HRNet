@@ -33,10 +33,15 @@ export const tableSlice = createSlice({
 
       state.employees = filteredEmployees;
     },
+    filterByLength: (state, action) => {
+      const tableLength = parseInt(action.payload);
+      if (!tableLength) return state.employees;
+      state.employees = state.employees.slice(0, tableLength);
+    },
   },
 });
 
-export const { setEmployees, sortEmployees, searchEmployee } =
+export const { setEmployees, sortEmployees, searchEmployee, filterByLength } =
   tableSlice.actions;
 
 export default tableSlice.reducer;

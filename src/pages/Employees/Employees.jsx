@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { lengthNumber } from "../../utils/utils";
 import Layout from "../../components/layout/Layout";
 import Table from "../../components/table/Table";
 import Searchbar from "../../components/searchbar/Searchbar";
+import Select from "../../components/select/Select";
 import "./Employees.css";
 
 const body = [
@@ -60,6 +62,127 @@ const body = [
     state: "WA",
     zipCode: "98101",
   },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
+  {
+    firstName: "William",
+    lastName: "Brown",
+    startDate: "2018-11-10",
+    department: "Finance",
+    dateOfBirth: "1979-07-15",
+    street: "202 Cedar Court",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+  },
 ];
 
 const Employees = () => {
@@ -70,6 +193,7 @@ const Employees = () => {
           Home
         </Link>
         <div className="searchbar-tools-container">
+          <Select options={lengthNumber} />
           <Searchbar />
         </div>
         <div id="employee-div" className="container table-container">

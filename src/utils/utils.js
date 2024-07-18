@@ -256,3 +256,5 @@ export const tableHeader = [
   { label: "State", key: "state" },
   { label: "Zip Code", key: "zipCode" },
 ];
+
+export const lengthNumber = ["5", "10", "25", "50", "100"];
