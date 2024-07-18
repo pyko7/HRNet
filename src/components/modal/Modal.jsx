@@ -1,6 +1,6 @@
 import Button from "../button/Button";
+import CloseIcon from "../icons/CloseIcon";
 import "./Modal.css";
-// UPDATE CLOSE BUTTON ICON TO SVG COMPONENT
 
 /**
  * @description Modal component
@@ -18,7 +18,9 @@ const Modal = ({ title, subtitle, buttonName, onClose, onClick }) => {
       <div className="modal">
         <div className="modal-header">
           <span className="modal-text modal-title">{title}</span>
-          <Button variant="standard">X</Button>
+          <Button handleClick={onClose} variant="standard">
+            <CloseIcon className="modal-close-icon" />
+          </Button>
         </div>
         <span className="modal-text modal-subtitle">{subtitle}</span>
       </div>
