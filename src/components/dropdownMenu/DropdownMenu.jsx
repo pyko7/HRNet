@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import "./DropdownMenu.css";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
+import "./DropdownMenu.css";
 
 /**
  * @description Dropdown component

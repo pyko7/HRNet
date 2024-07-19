@@ -25,7 +25,6 @@ const TableSection = ({ table }) => {
       <div id="employee-div" className="container table-container">
         <Table />
       </div>
-      <span>1 to 11 to 64 entries</span>
 
       <TablePagination />
     </>

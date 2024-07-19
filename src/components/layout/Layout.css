@@ -1,10 +1,16 @@
 .layout {
   width: 100%;
-  padding: 30px;
   min-height: 100vh;
-  background-color: #60a5fa;
+  padding: 1rem;
+  background-color: var(--main-color);
 }
 
 .title {
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .layout {
+    padding: 2rem;
+  }
 }

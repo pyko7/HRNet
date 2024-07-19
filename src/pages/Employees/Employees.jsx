@@ -10,10 +10,8 @@ const Employees = () => {
 
   return (
     <Layout title="Current Employees">
-      <div className="employee-page-wrapper">
-        <Link to="/" className="link-button">
-          Home
-        </Link>
+      <div className="page-wrapper">
+        <Link to="/">Home</Link>
         <TableContextProvider>
           <TableSection table={employees} />
         </TableContextProvider>

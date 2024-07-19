@@ -1,14 +1,22 @@
 .searchbar-container {
   width: 100%;
   max-width: 20rem;
-  padding: 5px 7px;
+  padding: 0 0.385rem;
   display: flex;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  background-color: #ccc;
+  align-items: center;
+  border-radius: var(--rounded-sm);
+  background-color: var(--medium-light-color);
+}
+.searchbar-container:hover {
+  opacity: O.8;
+}
+
+.searchbar::placeholder {
+  color: var(--dark-color);
 }
 .searchbar {
   width: 100%;
+  height: 1.75rem;
   padding: 0 0.5rem;
   border: none;
   outline: none;

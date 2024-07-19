@@ -6,10 +6,8 @@ import "./CreateEmployee.css";
 const CreateEmployee = () => {
   return (
     <Layout title="Create Employee">
-      <div className="create-employee-container">
-        <Link to="/employees" className="create-employee-link-button">
-          View Current Employees
-        </Link>
+      <div className="page-wrapper">
+        <Link to="/employees">View Current Employees</Link>
         <div className="create-employee-form-container">
           <Form />
         </div>
