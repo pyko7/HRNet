@@ -40,13 +40,18 @@
   justify-content: space-between;
 }
 
+.modal-button {
+  max-width: 2rem;
+  height: 100%;
+}
+
 .modal-text {
   display: block;
   width: 100%;
 }
 
 .modal-title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 .modal-subtitle {
   font-size: 1rem;

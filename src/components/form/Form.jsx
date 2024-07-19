@@ -114,7 +114,12 @@ const Form = () => {
       </form>
       {visible &&
         createPortal(
-          <Modal title="Employee successfully created" onClose={handleClose} />,
+          <Modal
+            title="Employee successfully created"
+            buttonName="Got it!"
+            onClick={handleClose}
+            onClose={handleClose}
+          />,
           document.body
         )}
     </>
