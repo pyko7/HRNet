@@ -1,19 +1,20 @@
-import { useDispatch } from "react-redux";
-import { sortEmployees } from "../../features/employees/employeesSlice";
 import ChevronUpIcon from "../icons/ChevronUpIcon";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import Button from "../button/Button";
+import { useTableContext } from "../../context/TableContext";
 import "./Table.css";
 
 const TableSortButtons = ({ columnKey }) => {
-  const dispatch = useDispatch();
+  const { sortTableData } = useTableContext();
 
   const handleSortAsc = () => {
-    dispatch(sortEmployees({ key: columnKey, direction: "asc" }));
+    const sortConfig = { key: columnKey, direction: "asc" };
+    sortTableData(sortConfig);
   };
 
   const handleSortDesc = () => {
-    dispatch(sortEmployees({ key: columnKey, direction: "desc" }));
+    const sortConfig = { key: columnKey, direction: "desc" };
+    sortTableData(sortConfig);
   };
 
   return (

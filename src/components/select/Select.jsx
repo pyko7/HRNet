@@ -1,19 +1,25 @@
-import { useDispatch } from "react-redux";
+import { useTableContext } from "../../context/TableContext";
 import "./Select.css";
-import { filterByLength } from "../../features/employees/employeesSlice";
 
 const Select = ({ options }) => {
-  const dispatch = useDispatch();
+  const { originalTableData, filterByLengthTableData } = useTableContext();
 
-  const handleClick = (tableLength) => {
-    dispatch(filterByLength(tableLength));
+  const handleChange = (event) => {
+    const tableLength = event.target.value;
+    filterByLengthTableData(tableLength, originalTableData);
   };
+
   return (
     <div className="select-wrapper">
       <span>Show</span>
-      <select className="custom-select" name="length" id="table-length">
+      <select
+        className="custom-select"
+        name="length"
+        id="table-length"
+        onChange={(e) => handleChange(e)}
+      >
         {options.map((option, idx) => (
-          <option value={option} key={idx} onClick={() => handleClick(option)}>
+          <option value={option} key={idx}>
             {option}
           </option>
         ))}

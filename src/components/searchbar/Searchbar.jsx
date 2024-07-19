@@ -1,18 +1,17 @@
 import { useRef, useState } from "react";
+import { useTableContext } from "../../context/TableContext";
 import CloseIcon from "../icons/CloseIcon";
 import SearchIcon from "../icons/SearchIcon";
 import "./Searchbar.css";
-import { useDispatch } from "react-redux";
-import { searchEmployee } from "../../features/employees/employeesSlice";
 
-const Searchbar = ({ id, placeholder }) => {
+const Searchbar = ({ placeholder }) => {
+  const { searchTableData } = useTableContext();
   const [inputValue, setInputValue] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const inputRef = useRef(null);
-  const dispatch = useDispatch();
 
   const handleSearch = (text) => {
-    dispatch(searchEmployee(text));
+    searchTableData(text);
   };
 
   const handleChange = (e) => {
@@ -31,7 +30,8 @@ const Searchbar = ({ id, placeholder }) => {
   const handleClear = () => {
     setInputValue("");
     setIsVisible(false);
-    dispatch(searchEmployee(""));
+    searchTableData("");
+
     if (inputRef.current) {
       inputRef.current.focus();
     }
@@ -43,7 +43,6 @@ const Searchbar = ({ id, placeholder }) => {
       <input
         ref={inputRef}
         type="text"
-        id={id}
         value={inputValue}
         className="searchbar"
         onChange={handleChange}
