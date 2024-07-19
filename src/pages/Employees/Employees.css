@@ -27,33 +27,3 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.pagination-button {
-  width: 100%;
-  max-width: 7rem;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  color: #fff;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-.pagination-button:hover {
-  opacity: 0.8;
-}
-
-.pagination-number {
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.pagination-number:hover {
-  background-color: red;
-}

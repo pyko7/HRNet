@@ -41,7 +41,7 @@ export const TableContextProvider = ({ children }) => {
 
   const filterByLengthTableData = (lengthValue, table) => {
     const filteredData = filterByLength(table, lengthValue);
-    setTableDataLength(lengthValue);
+    setTableDataLength(parseInt(lengthValue));
     setTableData(filteredData);
     return;
   };
@@ -52,6 +52,7 @@ export const TableContextProvider = ({ children }) => {
         tableData,
         setTableData,
         originalTableData,
+        tableDataLength,
         sortTableData,
         searchTableData,
         filterByLengthTableData,

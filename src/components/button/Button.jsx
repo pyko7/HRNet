@@ -14,6 +14,7 @@ const Button = ({
   variant = "contained",
   className = undefined,
   type = "button",
+  disabled = false,
 }) => {
   const buttonStyle =
     variant === "contained"
@@ -21,6 +22,7 @@ const Button = ({
       : "button button-standard";
   return (
     <button
+      disabled={disabled}
       type={type}
       onClick={handleClick}
       className={className ?? buttonStyle}

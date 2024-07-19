@@ -4,7 +4,7 @@ import { lengthNumber } from "../../utils/utils";
 import Table from "../../components/table/Table";
 import Searchbar from "../../components/searchbar/Searchbar";
 import Select from "../../components/select/Select";
-import Button from "../../components/button/Button";
+import TablePagination from "../table/TablePagination";
 
 const TableSection = ({ table }) => {
   const { setInitialTableData } = useTableContext();
@@ -26,22 +26,8 @@ const TableSection = ({ table }) => {
         <Table />
       </div>
       <span>1 to 11 to 64 entries</span>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "0.5rem",
-        }}
-      >
-        <Button className="pagination-button">Previous</Button>
-        <span className="pagination-number">1</span>
-        <span className="pagination-number">2</span>
-        <span className="pagination-number">3</span>
-        <span className="pagination-number">4</span>
-        <Button className="pagination-button">Next</Button>
-      </div>
+
+      <TablePagination />
     </>
   );
 };
