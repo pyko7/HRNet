@@ -17,17 +17,16 @@ const TableSection = ({ table }) => {
   }, [table]);
 
   return (
-    <>
+    <div className="table-section">
       <div className="searchbar-tools-container">
         <Select options={lengthNumber} />
         <Searchbar placeholder="Search an employee..." />
       </div>
-      <div id="employee-div" className="container table-container">
-        <Table />
-      </div>
+
+      <Table />
 
       <TablePagination />
-    </>
+    </div>
   );
 };
 

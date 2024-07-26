@@ -12,10 +12,10 @@ const Employees = () => {
     <Layout title="Current Employees">
       <div className="page-wrapper">
         <Link to="/">Home</Link>
-        <TableContextProvider>
-          <TableSection table={employees} />
-        </TableContextProvider>
       </div>
+      <TableContextProvider>
+        <TableSection table={employees} />
+      </TableContextProvider>
     </Layout>
   );
 };

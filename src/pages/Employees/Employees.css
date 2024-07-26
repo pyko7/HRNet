@@ -1,7 +1,3 @@
-.table-container {
-  width: 100%;
-}
-
 .link-button {
   width: fit-content;
   color: inherit;
@@ -11,10 +7,17 @@
 .link-button:hover {
   text-decoration: underline;
 }
+.table-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 .searchbar-tools-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
 }

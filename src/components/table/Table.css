@@ -61,19 +61,15 @@ tr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .pagination-button {
-  width: 100%;
-  max-width: 7rem;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  color: #fff;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 7px;
+  width: fit-content;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .pagination-button:hover {

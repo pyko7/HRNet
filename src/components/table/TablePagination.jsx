@@ -52,6 +52,7 @@ const TablePagination = () => {
       </span>
       <div className="pagination-inner-container">
         <Button
+          className="pagination-button"
           variant="standard"
           disabled={currentIndex === 0}
           handleClick={handlePreviousClick}
@@ -71,6 +72,7 @@ const TablePagination = () => {
           </span>
         ))}
         <Button
+          className="pagination-button"
           variant="standard"
           disabled={currentIndex === pagination.length - 1}
           handleClick={handleNextClick}

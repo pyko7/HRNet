@@ -1,4 +1,6 @@
 .select-wrapper {
+  width: 100%;
+  max-width: 10rem;
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -15,4 +17,10 @@
   border-radius: var(--rounded-sm);
   background: var(--medium-light-color);
   cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .select-wrapper {
+    width: fit-content;
+  }
 }
