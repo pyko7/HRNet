@@ -1,4 +1,4 @@
-const SearchIcon = ({ className }) => {
+const SearchIcon = ({ className, ariaHidden }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +7,7 @@ const SearchIcon = ({ className }) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className={className}
+      aria-hidden={ariaHidden}
     >
       <path
         strokeLinecap="round"

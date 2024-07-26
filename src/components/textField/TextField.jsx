@@ -24,6 +24,7 @@ const TextField = ({
   forwardedRef,
   onClick,
   onFocus,
+  ...rest
 }) => {
   const handleChange = (event) => {
     if (onChange) {
@@ -33,14 +34,14 @@ const TextField = ({
   return (
     <div className="textfield-label-container">
       {label && (
-        <label htmlFor={id} className="label">
+        <label htmlFor={id ?? rest?.objectId} className="label">
           {label}
         </label>
       )}
       <input
         ref={forwardedRef}
         type={type}
-        id={id}
+        id={id ?? rest?.objectId}
         className="textfield"
         value={value}
         readOnly={readOnly}

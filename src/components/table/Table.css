@@ -50,6 +50,11 @@ tr {
   align-items: center;
 }
 
+.sort-button {
+  width: 1rem;
+  height: 1rem;
+}
+
 .table-pagination-container {
   width: 100%;
   display: flex;

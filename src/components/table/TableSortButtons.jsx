@@ -19,11 +19,19 @@ const TableSortButtons = ({ columnKey }) => {
 
   return (
     <span className="sort-button-container">
-      <Button variant="standard" handleClick={handleSortAsc}>
-        <ChevronUpIcon className="sort-button" />
+      <Button
+        ariaLabel="sort ascending"
+        variant="standard"
+        handleClick={handleSortAsc}
+      >
+        <ChevronUpIcon className="sort-button" ariaHidden={true} />
       </Button>
-      <Button variant="standard" handleClick={handleSortDesc}>
-        <ChevronDownIcon className="sort-button" />
+      <Button
+        ariaLabel="sort descending"
+        variant="standard"
+        handleClick={handleSortDesc}
+      >
+        <ChevronDownIcon className="sort-button" ariaHidden={true} />
       </Button>
     </span>
   );

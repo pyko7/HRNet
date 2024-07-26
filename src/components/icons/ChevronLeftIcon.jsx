@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const ChevronLeftIcon = ({ className }) => {
+const ChevronLeftIcon = ({ className, ariaHidden }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ const ChevronLeftIcon = ({ className }) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className={clsx("icon-base", className)}
+      aria-hidden={ariaHidden}
     >
       <path
         strokeLinecap="round"

@@ -11,7 +11,7 @@ const Select = ({ options }) => {
 
   return (
     <div className="select-wrapper">
-      <span>Show</span>
+      <label htmlFor="table-length">Show</label>
       <select
         className="custom-select"
         name="length"
@@ -24,7 +24,7 @@ const Select = ({ options }) => {
           </option>
         ))}
       </select>
-      <span>entries</span>
+      <label htmlFor="table-length">entries</label>
     </div>
   );
 };

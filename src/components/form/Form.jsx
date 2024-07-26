@@ -174,7 +174,11 @@ const Form = () => {
           {errors.department && <ErrorMessage>{errors.state}</ErrorMessage>}
         </div>
 
-        <Button variant="contained" handleClick={handleClick}>
+        <Button
+          ariaLabel="save employee"
+          variant="contained"
+          handleClick={handleClick}
+        >
           Save
         </Button>
       </form>

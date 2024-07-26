@@ -19,14 +19,22 @@ const Modal = ({ title, subtitle, buttonName, onClose, onClick }) => {
         <div className="modal-header">
           <span className="modal-text modal-title">{title}</span>
           <div className="modal-button">
-            <Button handleClick={onClose} variant="standard">
-              <CloseIcon className="modal-close-icon" />
+            <Button
+              ariaLabel="close modal"
+              handleClick={onClose}
+              variant="standard"
+            >
+              <CloseIcon className="modal-close-icon" ariaHidden={true} />
             </Button>
           </div>
         </div>
         <span className="modal-text modal-subtitle">{subtitle}</span>
         {buttonName && (
-          <Button variant="contained" handleClick={onClick}>
+          <Button
+            ariaLabel={buttonName}
+            variant="contained"
+            handleClick={onClick}
+          >
             {buttonName}
           </Button>
         )}

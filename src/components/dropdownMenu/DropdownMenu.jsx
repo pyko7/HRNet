@@ -75,20 +75,33 @@ const DropdownMenu = ({ options, value, onChange }) => {
     <div className="dropdown" ref={dropdownRef}>
       <button
         type="button"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-controls="dropdown-list"
+        aria-labelledby="dropdown-button"
         className="dropdown-toggle"
         onClick={toggleDropdown}
         onKeyDown={handleKeyDown}
       >
         <span>{value || "Select an item"}</span>
-        <ChevronDownIcon aria-hidden="true" className="dropdown-icon" />
+        <ChevronDownIcon ariaHidden={true} className="dropdown-icon" />
       </button>
       {isOpen && (
-        <ul className="dropdown-menu">
+        <ul
+          id="dropdown-list"
+          role="listbox"
+          className="dropdown-menu"
+          aria-labelledby="dropdown-button"
+          aria-activedescendant={`dropdown-item-${focusedIndex}`}
+        >
           {options.map((item, index) => (
             <li
               key={item.id ?? index}
+              id={`dropdown-item-${index}`}
+              role="option"
               ref={(el) => (itemRefs.current[index] = el)}
               tabIndex={-1}
+              aria-selected={index === focusedIndex}
               onClick={() => handleItemClick(item)}
               onKeyDown={handleKeyDown}
             >

@@ -39,7 +39,7 @@ const Searchbar = ({ placeholder }) => {
 
   return (
     <div className="searchbar-container">
-      <SearchIcon className="searchbar-icon" />
+      <SearchIcon ariaHidden={true} className="searchbar-icon" />
       <input
         ref={inputRef}
         type="text"
@@ -49,8 +49,12 @@ const Searchbar = ({ placeholder }) => {
         placeholder={placeholder}
       />
       {isVisible && (
-        <button className="searchbar-button" onClick={handleClear}>
-          <CloseIcon className="searchbar-icon" />
+        <button
+          aria-label="clear field"
+          className="searchbar-button"
+          onClick={handleClear}
+        >
+          <CloseIcon className="searchbar-icon" ariaHidden={true} />
         </button>
       )}
     </div>

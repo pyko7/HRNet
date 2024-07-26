@@ -33,7 +33,7 @@ const CustomDatePicker = ({ id, label }) => {
         popperPlacement="bottom-start"
         customInput={
           <ForwardedTextField
-            id={id}
+            objectId={id}
             label={label}
             readOnly
             value={date.toLocaleDateString()}

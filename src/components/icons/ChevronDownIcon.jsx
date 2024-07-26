@@ -1,9 +1,10 @@
 /**
  * @description Chevron down icon component
  * @param {string} [className] component class name
+ * @param {boolean} [ariaHidden] aria hidden attribute
  * @returns
  */
-const ChevronDownIcon = ({ className }) => {
+const ChevronDownIcon = ({ className, ariaHidden }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,6 +13,7 @@ const ChevronDownIcon = ({ className }) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className={className}
+      aria-hidden={ariaHidden}
     >
       <path
         strokeLinecap="round"

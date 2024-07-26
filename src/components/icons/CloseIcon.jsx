@@ -1,4 +1,4 @@
-const CloseIcon = ({ className }) => {
+const CloseIcon = ({ className, ariaHidden }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +7,7 @@ const CloseIcon = ({ className }) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className={className}
+      aria-hidden={ariaHidden}
     >
       <path
         strokeLinecap="round"

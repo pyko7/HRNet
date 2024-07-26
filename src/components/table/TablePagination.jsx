@@ -52,12 +52,13 @@ const TablePagination = () => {
       </span>
       <div className="pagination-inner-container">
         <Button
+          ariaLabel="previous page"
           className="pagination-button"
           variant="standard"
           disabled={currentIndex === 0}
           handleClick={handlePreviousClick}
         >
-          <ChevronLeftIcon />
+          <ChevronLeftIcon ariaHidden={true} />
         </Button>
         {pagination.map((el, idx) => (
           <span
@@ -72,12 +73,13 @@ const TablePagination = () => {
           </span>
         ))}
         <Button
+          ariaLabel="next page"
           className="pagination-button"
           variant="standard"
           disabled={currentIndex === pagination.length - 1}
           handleClick={handleNextClick}
         >
-          <ChevronRightIcon />
+          <ChevronRightIcon ariaHidden={true} />
         </Button>
       </div>
     </div>
