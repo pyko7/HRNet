@@ -66,10 +66,15 @@ const Form = () => {
       birthDate: employee.birthDate.toDateString(),
       startDate: employee.startDate.toDateString(),
     };
-    console.log({ computedEmployee: computedEmployee.birthDate });
+
     if (Object.keys(formErrors).length === 0) {
       dispatch(setEmployees(computedEmployee));
       setVisible(true);
+      setEmployee({
+        ...emptyEmployeeData,
+        birthDate: new Date(),
+        startDate: new Date(),
+      });
     }
     return;
   };
@@ -151,6 +156,7 @@ const Form = () => {
             type="number"
             id="zip-code"
             label="Zip code"
+            value={employee.zipCode}
             onChange={(value) => handleInputChange("zipCode", value)}
           />
           {errors.zipCode && <ErrorMessage>{errors.zipCode}</ErrorMessage>}
