@@ -5,3 +5,7 @@
   align-items: center;
   gap: 1.25rem;
 }
+
+.textfield-container {
+  width: 100%;
+}
