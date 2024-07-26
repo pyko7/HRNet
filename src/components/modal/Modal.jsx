@@ -11,11 +11,24 @@ import "./Modal.css";
  * @param {Function} onClick Callback function on save button click
  * @returns
  */
-const Modal = ({ title, subtitle, buttonName, onClose, onClick }) => {
+const Modal = ({
+  title,
+  subtitle,
+  buttonName,
+  onClose,
+  onClick,
+  backgroundColor,
+  modalBackgroundColor,
+  customCloseIcon,
+}) => {
   return (
     <div className="modal-container">
-      <div className="modal-background" onClick={onClose}></div>
-      <div className="modal">
+      <div
+        className="modal-background"
+        style={{ backgroundColor }}
+        onClick={onClose}
+      ></div>
+      <div className="modal" style={{ backgroundColor: modalBackgroundColor }}>
         <div className="modal-header">
           <span className="modal-text modal-title">{title}</span>
           <div className="modal-button">
@@ -24,7 +37,11 @@ const Modal = ({ title, subtitle, buttonName, onClose, onClick }) => {
               handleClick={onClose}
               variant="standard"
             >
-              <CloseIcon className="modal-close-icon" ariaHidden={true} />
+              {customCloseIcon ? (
+                customCloseIcon
+              ) : (
+                <CloseIcon className="modal-close-icon" ariaHidden={true} />
+              )}
             </Button>
           </div>
         </div>

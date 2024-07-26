@@ -11,13 +11,13 @@ import { useDispatch } from "react-redux";
 import { setEmployees } from "../../features/employees/employeesSlice";
 import "./Form.css";
 import "../textField/TextField.css";
-
+import ChevronDownIcon from "../icons/ChevronDownIcon";
 /**
  * @description Create employee form component
  * @returns {React.FC}
  */
 const Form = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [employee, setEmployee] = useState({
     ...emptyEmployeeData,
     birthDate: new Date(),
