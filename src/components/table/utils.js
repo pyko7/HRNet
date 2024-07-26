@@ -14,9 +14,12 @@ const filterEmployees = (table, searchString) => {
   if (searchString.trim() === "") {
     return table;
   } else {
+    const searchTerms = searchString.toLowerCase().split(/\s+/);
     return table.filter((employee) =>
-      Object.values(employee).some((value) =>
-        String(value).toLowerCase().includes(searchString)
+      searchTerms.every((term) =>
+        Object.values(employee).some((value) =>
+          String(value).toLowerCase().includes(term)
+        )
       )
     );
   }
