@@ -25,7 +25,7 @@ export const TableContextProvider = ({ children }) => {
 
   const sortTableData = (sortObj) => {
     const sortedData = sortEmployees(tableData, sortObj);
-    setTableData(sortedData);
+    setTableData(sortedData.employees);
     return;
   };
 
