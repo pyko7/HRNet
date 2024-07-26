@@ -250,7 +250,7 @@ export const tableHeader = [
   { label: "Last Name", key: "lastName" },
   { label: "Start Date", key: "startDate" },
   { label: "Department", key: "department" },
-  { label: "Date of Birth", key: "dateOfBirth" },
+  { label: "Date of Birth", key: "birthDate" },
   { label: "Street", key: "street" },
   { label: "City", key: "city" },
   { label: "State", key: "state" },

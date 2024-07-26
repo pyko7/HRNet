@@ -18,16 +18,26 @@ import "../textField/TextField.css";
  */
 const Form = () => {
   const [visible, setVisible] = useState(false);
-  const [employee, setEmployee] = useState(emptyEmployeeData);
+  const [employee, setEmployee] = useState({
+    ...emptyEmployeeData,
+    birthDate: new Date(),
+    startDate: new Date(),
+  });
   const [errors, setErrors] = useState([]);
 
   const statesName = states.map((state) => state.name);
   const dispatch = useDispatch();
 
   const handleInputChange = (field, value) => {
+    let val = value;
+
+    if (field === "zipCode") {
+      val = parseInt(val);
+    }
+
     setEmployee((prevEmployee) => ({
       ...prevEmployee,
-      [field]: value,
+      [field]: val,
     }));
   };
 
@@ -38,15 +48,12 @@ const Form = () => {
       if (!value) {
         newErrors[key] = "This field is required";
       }
+      if (!value && key === "zipCode") {
+        newErrors[key] = "Only numbers are allowed";
+      }
     }
 
     setErrors(newErrors);
-
-    for (const [key, value] of Object.entries(employee)) {
-      if (!value) {
-        newErrors[key] = "This field is required";
-      }
-    }
     return newErrors;
   };
 
@@ -54,8 +61,14 @@ const Form = () => {
     e.preventDefault();
     const formErrors = handleErrors();
 
+    const computedEmployee = {
+      ...employee,
+      birthDate: employee.birthDate.toDateString(),
+      startDate: employee.startDate.toDateString(),
+    };
+    console.log({ computedEmployee: computedEmployee.birthDate });
     if (Object.keys(formErrors).length === 0) {
-      dispatch(setEmployees(employee));
+      dispatch(setEmployees(computedEmployee));
       setVisible(true);
     }
     return;
