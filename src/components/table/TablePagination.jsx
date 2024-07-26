@@ -42,14 +42,13 @@ const TablePagination = () => {
   };
 
   useEffect(() => {
-    setStartIndex(1);
     setEndIndex(tableDataLength);
   }, [tableDataLength]);
 
   return (
     <div className="table-pagination-container">
       <span className="pagination-label">
-        {startIndex} to {endIndex} of {originalTableData.length} entries
+        {startIndex + 1} to {endIndex} of {originalTableData.length} entries
       </span>
       <div className="pagination-inner-container">
         <Button
