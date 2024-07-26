@@ -7,7 +7,9 @@ const CreateEmployee = () => {
   return (
     <Layout title="Create Employee">
       <div className="page-wrapper">
-        <Link to="/employees">View Current Employees</Link>
+        <Link className="link" to="/employees">
+          View Current Employees
+        </Link>
         <div className="create-employee-form-container">
           <Form />
         </div>

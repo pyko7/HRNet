@@ -29,11 +29,22 @@ body {
   color: var(--dark-color);
 }
 
+a,
+a:visited {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .page-wrapper {
   width: 100%;
   padding: 1rem 0;

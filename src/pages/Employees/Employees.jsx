@@ -11,7 +11,9 @@ const Employees = () => {
   return (
     <Layout title="Current Employees">
       <div className="page-wrapper">
-        <Link to="/">Home</Link>
+        <Link className="link" to="/">
+          Home
+        </Link>
       </div>
       <TableContextProvider>
         <TableSection table={employees} />
