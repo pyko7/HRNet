@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 /**
  * @description Chevron up icon component
  * @param {string} [className] component class name
@@ -12,7 +14,7 @@ const ChevronUpIcon = ({ className, ariaHidden = false }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={className}
+      className={clsx("icon-base", className)}
       aria-hidden={ariaHidden}
     >
       <path

@@ -1,3 +1,8 @@
+/**
+ * @description Table row component
+ * @param {Object} row Table row content
+ * @returns
+ */
 const TableRow = ({ row }) => (
   <tr>
     <td>{row.firstName}</td>

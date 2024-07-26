@@ -1,3 +1,11 @@
+import clsx from "clsx";
+
+/**
+ * @description Search icon component
+ * @param {string} [className] component class name
+ * @param {boolean} [ariaHidden] aria hidden attribute
+ * @returns
+ */
 const SearchIcon = ({ className, ariaHidden }) => {
   return (
     <svg
@@ -6,7 +14,7 @@ const SearchIcon = ({ className, ariaHidden }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={className}
+      className={clsx("icon-base", className)}
       aria-hidden={ariaHidden}
     >
       <path

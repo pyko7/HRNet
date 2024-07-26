@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { body } from "./body";
+
 const initialState = {
-  employees: body,
-  // employees: [],
+  employees: [],
+  // used for demo
+  // employees: body,
 };
 
 export const tableSlice = createSlice({

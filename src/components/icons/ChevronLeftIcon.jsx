@@ -1,5 +1,11 @@
 import clsx from "clsx";
 
+/**
+ * @description Chevron left icon component
+ * @param {string} [className] component class name
+ * @param {boolean} [ariaHidden] aria hidden attribute
+ * @returns
+ */
 const ChevronLeftIcon = ({ className, ariaHidden }) => {
   return (
     <svg

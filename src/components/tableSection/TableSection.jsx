@@ -6,6 +6,11 @@ import Searchbar from "../../components/searchbar/Searchbar";
 import Select from "../../components/select/Select";
 import TablePagination from "../table/TablePagination";
 
+/**
+ * @description Table container
+ * @param {Object} table table displayed
+ * @returns
+ */
 const TableSection = ({ table }) => {
   const { setInitialTableData } = useTableContext();
 

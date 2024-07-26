@@ -4,6 +4,11 @@ import Button from "../button/Button";
 import { useTableContext } from "../../context/TableContext";
 import "./Table.css";
 
+/**
+ * @description Buttons used to sort data
+ * @param {string} columnKey Key/name of columns
+ * @returns
+ */
 const TableSortButtons = ({ columnKey }) => {
   const { sortTableData } = useTableContext();
 

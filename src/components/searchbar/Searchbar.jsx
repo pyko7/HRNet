@@ -4,6 +4,11 @@ import CloseIcon from "../icons/CloseIcon";
 import SearchIcon from "../icons/SearchIcon";
 import "./Searchbar.css";
 
+/**
+ * @description Searchbar component
+ * @param {string} placeholder Searchbar placeholder
+ * @returns
+ */
 const Searchbar = ({ placeholder }) => {
   const { searchTableData } = useTableContext();
   const [inputValue, setInputValue] = useState("");

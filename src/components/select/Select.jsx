@@ -1,6 +1,11 @@
 import { useTableContext } from "../../context/TableContext";
 import "./Select.css";
 
+/**
+ * @description Select component
+ * @param {string[]} options Select's options
+ * @returns
+ */
 const Select = ({ options }) => {
   const { originalTableData, filterByLengthTableData } = useTableContext();
 
