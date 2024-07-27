@@ -1645,6 +1645,11 @@ iterator.prototype@^1.1.2:
     reflect.getprototypeof "^1.0.4"
     set-function-name "^2.0.1"
 
+jh-modal@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/jh-modal/-/jh-modal-1.0.0.tgz"
+  integrity sha512-pAicqnoL9StFHowNdjHzMjW2xXKFNcm6L2OhI4FLL3zZPpQx+fEYqm/+d9yijt2dc58tpB49UAIqEBehMFnMyA==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"

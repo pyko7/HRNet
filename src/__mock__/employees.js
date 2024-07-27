@@ -74,3 +74,15 @@ export const employeesSortedByFirstName = [
   "Michael",
   "William",
 ];
+
+export const newEmployee = {
+  firstName: "Cassandra",
+  lastName: "Goll",
+  startDate: "2024-01-10",
+  department: "Finance",
+  birthDate: "1978-01-12",
+  street: "3755 East Avenue",
+  city: "Superstition",
+  state: "AZ",
+  zipCode: "85207",
+};

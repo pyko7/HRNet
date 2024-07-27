@@ -4,14 +4,13 @@ import Button from "../button/Button";
 import TextField from "../textField/TextField";
 import DropdownMenu from "../dropdownMenu/DropdownMenu";
 import ErrorMessage from "../errorMessage/ErrorMessage";
-import Modal from "../modal/Modal";
+import Modal from "jh-modal";
 import { departments, emptyEmployeeData, states } from "../../utils/utils";
 import CustomDatePicker from "../datePicker/DatePicker";
 import { useDispatch } from "react-redux";
 import { setEmployees } from "../../features/employees/employeesSlice";
 import "./Form.css";
 import "../textField/TextField.css";
-
 /**
  * @description Create employee form component
  * @returns {React.FC}
