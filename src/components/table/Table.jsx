@@ -7,14 +7,16 @@ const Table = () => {
   const { tableData } = useTableContext();
 
   return (
-    <table className="table">
-      <TableHeader />
-      <tbody>
-        {tableData?.map((row, idx) => (
-          <TableRow row={row} key={idx} />
-        ))}
-      </tbody>
-    </table>
+    <div className="table-container">
+      <table className="table">
+        <TableHeader />
+        <tbody>
+          {tableData?.map((row, idx) => (
+            <TableRow row={row} key={idx} />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 export default Table;
