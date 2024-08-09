@@ -9,9 +9,10 @@ import "./DatePicker.css";
  *
  * @param {string} id - The input's id.
  * @param {string} label - The input's label.
+ * @param {string} [dataCy] - Cypress attribute
  * @returns {React.FC}
  */
-const CustomDatePicker = ({ id, label }) => {
+const CustomDatePicker = ({ id, label, dataCy }) => {
   const [date, setDate] = useState(new Date());
 
   const handleSelect = (date) => {
@@ -37,6 +38,7 @@ const CustomDatePicker = ({ id, label }) => {
             label={label}
             readOnly
             value={date.toLocaleDateString()}
+            dataCy={dataCy}
           />
         }
       />

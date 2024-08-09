@@ -12,6 +12,7 @@ import "./TextField.css";
  * @param {React.Ref} [forwardedRef] - Ref forwarded to the input element.
  * @param {function} [onClick] - Callback function to handle input click.
  * @param {function} [onFocus] - Callback function to handle input focus.
+ * @param {string} [dataCy] - Cypress attribute
  * @returns {React.FC}
  */
 const TextField = ({
@@ -24,8 +25,10 @@ const TextField = ({
   forwardedRef,
   onClick,
   onFocus,
+  dataCy = "test",
   ...rest
 }) => {
+  console.log({ dataCy });
   const handleChange = (event) => {
     if (onChange) {
       onChange(event.target.value);
@@ -48,6 +51,7 @@ const TextField = ({
         onChange={handleChange}
         onClick={onClick}
         onFocus={onFocus}
+        data-cy={`employee-field-${dataCy}`}
       />
     </div>
   );

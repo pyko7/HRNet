@@ -84,13 +84,14 @@ const Form = () => {
 
   return (
     <>
-      <form className="form">
+      <form className="form" data-cy="employee-form">
         <div className="textfield-container">
           <TextField
             id="first-name"
             label="First Name"
             value={employee.firstName}
             onChange={(value) => handleInputChange("firstName", value)}
+            dataCy="firstName"
           />
           {errors.firstName && <ErrorMessage>{errors.firstName}</ErrorMessage>}
         </div>
@@ -101,6 +102,7 @@ const Form = () => {
             label="Last Name"
             value={employee.lastName}
             onChange={(value) => handleInputChange("lastName", value)}
+            dataCy="lastName"
           />
           {errors.lastName && <ErrorMessage>{errors.lastName}</ErrorMessage>}
         </div>
@@ -110,12 +112,14 @@ const Form = () => {
           label="Birth Date"
           value={employee.birthDate}
           onChange={(value) => handleInputChange("birthDate", value)}
+          dataCy="birthDate"
         />
         <CustomDatePicker
           id="start-date"
           label="Start Date"
           value={employee.startDate}
           onChange={(value) => handleInputChange("startDate", value)}
+          dataCy="startDate"
         />
 
         <div className="textfield-container">
@@ -124,6 +128,7 @@ const Form = () => {
             label="Street"
             value={employee.street}
             onChange={(value) => handleInputChange("street", value)}
+            dataCy="street"
           />
           {errors.street && <ErrorMessage>{errors.street}</ErrorMessage>}
         </div>
@@ -134,6 +139,7 @@ const Form = () => {
             label="City"
             value={employee.city}
             onChange={(value) => handleInputChange("city", value)}
+            dataCy="city"
           />
           {errors.city && <ErrorMessage>{errors.city}</ErrorMessage>}
         </div>
@@ -146,6 +152,7 @@ const Form = () => {
             options={statesName}
             value={employee.state}
             onChange={(value) => handleInputChange("state", value)}
+            dataCy="state"
           />
           {errors.state && <ErrorMessage>{errors.state}</ErrorMessage>}
         </div>
@@ -157,6 +164,7 @@ const Form = () => {
             label="Zip code"
             value={employee.zipCode}
             onChange={(value) => handleInputChange("zipCode", value)}
+            dataCy="zipCode"
           />
           {errors.zipCode && <ErrorMessage>{errors.zipCode}</ErrorMessage>}
         </div>
@@ -169,6 +177,7 @@ const Form = () => {
             options={departments}
             value={employee.department}
             onChange={(value) => handleInputChange("department", value)}
+            dataCy="department"
           />
           {errors.department && <ErrorMessage>{errors.state}</ErrorMessage>}
         </div>
@@ -177,6 +186,7 @@ const Form = () => {
           ariaLabel="save employee"
           variant="contained"
           handleClick={handleClick}
+          dataCy="save"
         >
           Save
         </Button>

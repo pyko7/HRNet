@@ -7,9 +7,10 @@ import "./DropdownMenu.css";
  * @param {string[]} options List of select options
  * @param {string} value The selected value
  * @param {function} onChange Callback function to handle value change
+ * @param {string} [dataCy] - Cypress attribute
  * @returns
  */
-const DropdownMenu = ({ options, value, onChange }) => {
+const DropdownMenu = ({ options, value, onChange, dataCy }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
 
@@ -72,7 +73,11 @@ const DropdownMenu = ({ options, value, onChange }) => {
   }, [dropdownRef]);
 
   return (
-    <div className="dropdown" ref={dropdownRef}>
+    <div
+      className="dropdown"
+      ref={dropdownRef}
+      data-cy={`employee-field-${dataCy}`}
+    >
       <button
         type="button"
         aria-haspopup="listbox"
@@ -93,6 +98,7 @@ const DropdownMenu = ({ options, value, onChange }) => {
           className="dropdown-menu"
           aria-labelledby="dropdown-button"
           aria-activedescendant={`dropdown-item-${focusedIndex}`}
+          data-cy={`dropdown-menu-${dataCy}`}
         >
           {options.map((item, index) => (
             <li
@@ -104,6 +110,7 @@ const DropdownMenu = ({ options, value, onChange }) => {
               aria-selected={index === focusedIndex}
               onClick={() => handleItemClick(item)}
               onKeyDown={handleKeyDown}
+              data-cy={`dropdown-item-${dataCy}-${index}`}
             >
               {item}
             </li>

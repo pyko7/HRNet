@@ -8,6 +8,7 @@ import "./Button.css";
  * @param {string} [variant] button variants (contained or standard)
  * @param {string} [className] custom classes
  * @param {string} [type] button type
+ * @param {string} [dataCy] - Cypress attribute
  * @returns
  */
 const Button = ({
@@ -19,6 +20,7 @@ const Button = ({
   type = "button",
   disabled = false,
   ariaLabel = "",
+  dataCy = "",
 }) => {
   const buttonStyle =
     variant === "contained"
@@ -32,6 +34,7 @@ const Button = ({
       onClick={handleClick}
       className={className ?? buttonStyle}
       aria-label={ariaLabel}
+      data-cy={dataCy}
     >
       {children}
     </button>
