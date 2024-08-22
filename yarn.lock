@@ -2049,9 +2049,9 @@ iterator.prototype@^1.1.2:
     set-function-name "^2.0.1"
 
 jh-modal@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/jh-modal/-/jh-modal-1.0.0.tgz"
-  integrity sha512-pAicqnoL9StFHowNdjHzMjW2xXKFNcm6L2OhI4FLL3zZPpQx+fEYqm/+d9yijt2dc58tpB49UAIqEBehMFnMyA==
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/jh-modal/-/jh-modal-1.0.2.tgz"
+  integrity sha512-dXzT85kgJA/Osr6V0JEg6dbvV9f58jHDUCawxmkfWdW+3sn+Ovyf79QdHpq2T853fyT0ggXf9ayBewixLg/cwA==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
